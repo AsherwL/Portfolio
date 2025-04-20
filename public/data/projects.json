@@ -1,7 +1,7 @@
 [
   {
     "id": "project_solar",
-    "image": "/src/images/Projet_panneau_solaire.png",
+    "image": "/images/Projet_panneau_solaire.png",
     "client": "Projet local",
     "date": "2024",
     "technologies": ["Django", "TailwindCSS", "SQLite"],
@@ -21,7 +21,7 @@
   
   {
     "id": "project_blog",
-    "image": "/src/images/Projet_blog_personnel.png",
+    "image": "/images/Projet_blog_personnel.png",
     "client": "Projet personnel",
     "date": "2025",
     "technologies": ["Django", "TailwindCSS", "SQLite"],
