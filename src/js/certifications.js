@@ -8,7 +8,7 @@ export function initCertifications() {
   // Fetch certifications data
   async function fetchCertifications() {
     try {
-      const response = await fetch('/src/data/certifications.json');
+      const response = await fetch('/data/certifications.json');
       const certifications = await response.json();
       
       // Clear loading skeletons

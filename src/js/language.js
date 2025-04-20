@@ -22,7 +22,7 @@ export function initLanguage() {
     // If translations aren't loaded yet, load them
     if (!translations[lang]) {
       try {
-        const response = await fetch(`/src/data/translations/${lang}.json`);
+        const response = await fetch(`/data/translations/${lang}.json`);
         translations[lang] = await response.json();
       } catch (error) {
         console.error(`Failed to load ${lang} translations:`, error);

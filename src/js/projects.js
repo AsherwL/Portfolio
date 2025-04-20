@@ -13,7 +13,7 @@ export function initProjects() {
   // Fetch projects data
   async function fetchProjects() {
     try {
-      const response = await fetch('/src/data/projects.json');
+      const response = await fetch('/data/projects.json');
       const projects = await response.json();
       
       // Clear loading skeletons
