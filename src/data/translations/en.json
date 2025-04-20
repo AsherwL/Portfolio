@@ -1,0 +1,86 @@
+{
+  "name": "Asher WELE",
+  "language": "EN",
+  "nav": {
+    "about": "About",
+    "skills": "Skills",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "hero": {
+    "greeting": "Hello, I'm",
+    "description": "Creative, passionate, and committed to crafting exceptional web experiences.",
+    "hire": "Hire me",
+    "projects": "View my projects"
+  },
+  "about": {
+  "title": "About me",
+  "paragraph1": "I'm a junior web developer with a strong passion for back-end development. I've already built several real-world projects using Django, TailwindCSS, and SQLite — and I’m constantly leveling up my skills.",
+  "paragraph2": "Even as a newcomer to the industry, I'm reliable, curious, and fully committed. I approach each line of code as an opportunity to grow and to build useful, efficient tools that serve real needs.",
+  "paragraph3": "I'm comfortable working independently or collaboratively, and I always aim to deliver clean, maintainable, and user-friendly code. Got a project in mind? I’d be happy to bring it to life with you.",
+  "downloadCV": "Download CV",
+  "contact": "Contact me",
+  "stats": {
+    "projects": "Projects completed",
+    "coffee": "Cups of coffee ☕",
+    "hours": "Hours of code",
+    "clients": "Happy clients"
+    }
+  },
+
+  "skills": {
+    "title": "My skills",
+    "description": "Here are the technologies and tools I regularly work with",
+    "otherTitle": "Other skills"
+  },
+  "projects": {
+    "title": "My projects",
+    "description": "Discover a selection of my most recent work"
+  },
+  "certifications": {
+    "title": "Certifications",
+    "description": "My professional certifications and training"
+  },
+  "goals": {
+    "title": "Current Goals",
+    "description": "What I'm currently working on",
+    "goal1": {
+      "title": "Mastering web scraping with Python",
+      "description": "Using tools like BeautifulSoup and Selenium to efficiently extract and automate data collection from the web."
+    },
+    "goal2": {
+      "title": "Building mobile apps with Flutter",
+      "description": "Learning to create high-performance, cross-platform mobile applications using Dart and Flutter."
+    },
+    "goal3": {
+      "title": "Leveling up in React",
+      "description": "Deepening my understanding of hooks, state management, and the React ecosystem to build modern, dynamic UIs."
+    }
+  },
+
+  "contact": {
+    "title": "Contact me",
+    "description": "Let's discuss your project and see how I can help you",
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "subject": "Subject",
+      "message": "Message",
+      "submit": "Send message"
+    },
+    "info": {
+      "title": "Contact information",
+      "email": "Email",
+      "phone": "Phone",
+      "location": "Location",
+      "social": "Social media"
+    }
+  },
+  "footer": {
+    "description": "Creator of modern and aesthetic web experiences focused on the user.",
+    "quickLinks": "Quick links",
+
+    "emailPlaceholder": "Your email",
+    "rights": "All rights reserved"
+  }
+}

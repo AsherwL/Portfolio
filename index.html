@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio - Asher WL</title>
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <link rel="stylesheet" href="/src/css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+  <script src="/node_modules/htmx.org/dist/htmx.min.js" defer></script>
+</head>
+<body class="font-sans bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-200 transition-colors duration-300">
+  <!-- Navbar -->
+  <header id="navbar" class="fixed top-0 left-0 w-full z-50 transition-all duration-300 bg-transparent">
+    <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+      <a href="#hero" class="text-xl font-bold tracking-tight" data-translate="name">
+        Asher WELE
+      </a>
+      <div class="hidden md:flex space-x-8 items-center">
+        <a href="#about" class="nav-link" data-translate="nav.about">À propos</a>
+        <a href="#skills" class="nav-link" data-translate="nav.skills">Compétences</a>
+        <a href="#projects" class="nav-link" data-translate="nav.projects">Projets</a>
+        <a href="#contact" class="nav-link" data-translate="nav.contact">Contact</a>
+        <button id="lang-switch" class="flex items-center space-x-1 nav-link">
+          <span class="lang-text" data-translate="language">FR</span>
+          <i class="fas fa-globe"></i>
+        </button>
+        <button id="theme-switch" class="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition duration-300">
+          <i class="fas fa-moon dark:hidden"></i>
+          <i class="fas fa-sun hidden dark:block"></i>
+        </button>
+      </div>
+      <button id="mobile-menu-button" class="md:hidden focus:outline-none">
+        <i class="fas fa-bars text-2xl"></i>
+      </button>
+    </nav>
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="hidden bg-white dark:bg-gray-800 shadow-lg md:hidden">
+      <div class="container mx-auto px-6 py-4 space-y-4">
+        <a href="#about" class="block py-2 nav-link" data-translate="nav.about">À propos</a>
+        <a href="#skills" class="block py-2 nav-link" data-translate="nav.skills">Compétences</a>
+        <a href="#projects" class="block py-2 nav-link" data-translate="nav.projects">Projets</a>
+        <a href="#contact" class="block py-2 nav-link" data-translate="nav.contact">Contact</a>
+        <div class="flex items-center justify-between pt-4 border-t border-gray-200 dark:border-gray-700">
+          <button id="mobile-lang-switch" class="flex items-center space-x-1">
+            <span class="lang-text" data-translate="language">FR</span>
+            <i class="fas fa-globe"></i>
+          </button>
+          <button id="mobile-theme-switch" class="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition duration-300">
+            <i class="fas fa-moon dark:hidden"></i>
+            <i class="fas fa-sun hidden dark:block"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="hero" class="min-h-screen flex items-center justify-center relative overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20 dark:from-blue-900/30 dark:to-purple-900/30"></div>
+    <div class="container mx-auto px-6 py-24 relative z-10">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div class="text-center md:text-left" data-aos="fade-right">
+          <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
+            <span data-translate="hero.greeting">Bonjour, je suis</span>
+            <span class="block text-blue-600 dark:text-blue-400 mt-2">
+              <span data-translate="name">Asher WELE</span>
+            </span>
+          </h1>
+          <div class="h-12 md:h-16 overflow-hidden my-4">
+            <div id="typing-container" class="text-2xl md:text-3xl font-semibold text-gray-600 dark:text-gray-300"></div>
+          </div>
+          <p class="text-xl md:text-2xl mb-8 text-gray-600 dark:text-gray-300" data-translate="hero.description">
+            Créatif, passionné et déterminé à créer des expériences web exceptionnelles.
+          </p>
+          <div class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 justify-center md:justify-start">
+            <a href="#contact" class="btn-primary" data-translate="hero.hire">Me confier un projet</a>
+            <a href="#projects" class="btn-secondary" data-translate="hero.projects">Voir mes projets</a>
+          </div>
+        </div>
+        <div class="hidden md:block relative" data-aos="fade-left">
+          <div class="relative z-10 rounded-full overflow-hidden border-4 border-white dark:border-gray-800 shadow-xl h-80 w-80 mx-auto">
+            <img src="src/images/Profile.jpeg" 
+                alt="Profile" class="h-full w-full object-cover" />
+          </div>
+          <div class="absolute -bottom-10 -right-10 h-40 w-40 bg-blue-100 dark:bg-blue-900 rounded-full opacity-50"></div>
+          <div class="absolute -top-10 -left-10 h-40 w-40 bg-purple-100 dark:bg-purple-900 rounded-full opacity-50"></div>
+        </div>
+      </div>
+    </div>
+    <div class="absolute bottom-10 left-0 right-0 flex justify-center animate-bounce">
+      <a href="#about" class="text-gray-500 dark:text-gray-400">
+        <i class="fas fa-chevron-down text-2xl"></i>
+      </a>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="py-24 bg-gray-50 dark:bg-gray-800">
+    <div class="container mx-auto px-6">
+      <h2 class="section-title" data-translate="about.title">À propos de moi</h2>
+      <div class="grid md:grid-cols-2 gap-12 items-center mt-12">
+        <div data-aos="fade-right">
+          <div class="relative">
+            <div class="absolute inset-0 bg-blue-100 dark:bg-blue-900/30 transform -rotate-6 rounded-lg"></div>
+            <img src="src/images/Coding_setup.jpg"
+              alt="Coding setup" class="relative rounded-lg shadow-lg z-10" />
+
+
+          </div>
+        </div>
+        <div data-aos="fade-left">
+          <p class="text-lg mb-6" data-translate="about.paragraph1">
+            Je suis un développeur web junior passionné par le **back-end**, curieux et toujours prêt à apprendre. J’ai déjà réalisé plusieurs projets concrets avec **Django, TailwindCSS et SQLite**, et je continue à monter en compétences chaque semaine.
+          </p>
+          <p class="text-lg mb-6" data-translate="about.paragraph2">
+            Même si je débute dans le métier, je suis quelqu’un de fiable, organisé et investi. Chaque ligne de code est pour moi une occasion d’évoluer et de créer des outils utiles, efficaces et pensés pour l’utilisateur.
+          </p>
+          <p class="text-lg mb-8" data-translate="about.paragraph3">
+            Je suis à l’aise en autonomie comme en équipe, et je mets un point d'honneur à livrer un travail propre, documenté et évolutif. Vous avez un projet ? Je suis prêt à le concrétiser à vos côtés.
+          </p>
+          <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+            <a href="#" id="cv-download" class="btn-secondary" data-translate="about.downloadCV">
+              <i class="fas fa-download mr-2"></i> Télécharger CV
+            </a>
+            <a href="#contact" class="btn-primary" data-translate="about.contact">
+              <i class="fas fa-paper-plane mr-2"></i> Me contacter
+            </a>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Statistiques -->
+      <div class="mt-20 grid grid-cols-2 md:grid-cols-3 gap-8 text-center">
+        <div class="p-6 bg-white dark:bg-gray-900 rounded-lg shadow-md transform hover:-translate-y-2 transition duration-300">
+          <div class="text-4xl text-blue-500 mb-4"><i class="fas fa-code"></i></div>
+          <h3 class="text-xl font-bold mb-2" data-translate="about.stats.projects">Projets réalisés</h3>
+          <p class="text-3xl font-bold text-blue-600 dark:text-blue-400">6+</p>
+        </div>
+        <div class="p-6 bg-white dark:bg-gray-900 rounded-lg shadow-md transform hover:-translate-y-2 transition duration-300">
+          <div class="text-4xl text-blue-500 mb-4"><i class="fas fa-clock"></i></div>
+          <h3 class="text-xl font-bold mb-2" data-translate="about.stats.hours">Heures de code</h3>
+          <p class="text-3xl font-bold text-blue-600 dark:text-blue-400">1,000+</p>
+        </div>
+        <div class="p-6 bg-white dark:bg-gray-900 rounded-lg shadow-md transform hover:-translate-y-2 transition duration-300">
+          <div class="text-4xl text-blue-500 mb-4"><i class="fas fa-brain"></i></div>
+          <h3 class="text-xl font-bold mb-2" data-translate="about.stats.learning">Technos apprises</h3>
+          <p class="text-3xl font-bold text-blue-600 dark:text-blue-400">10+</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+
+  <!-- Skills Section -->
+  <section id="skills" class="py-24">
+    <div class="container mx-auto px-6">
+      <h2 class="section-title" data-translate="skills.title">Mes compétences</h2>
+      <p class="section-description" data-translate="skills.description">
+        Voici les technologies et outils que j'utilise au quotidien ou que je suis en train de maîtriser
+      </p>
+  
+      <!-- Compétences principales -->
+      <div class="mt-12 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+        <!-- HTML -->
+        <div class="skill-card" data-aos="zoom-in" data-aos-delay="100">
+          <div class="skill-icon"><i class="fab fa-html5"></i></div>
+          <h3 class="skill-title">HTML5</h3>
+          <div class="skill-bar"><div class="skill-level" style="width: 90%"></div></div>
+        </div>
+  
+        <!-- CSS -->
+        <div class="skill-card" data-aos="zoom-in" data-aos-delay="200">
+          <div class="skill-icon"><i class="fab fa-css3-alt"></i></div>
+          <h3 class="skill-title">CSS3</h3>
+          <div class="skill-bar"><div class="skill-level" style="width: 90%"></div></div>
+        </div>
+  
+        <!-- TailwindCSS -->
+        <div class="skill-card" data-aos="zoom-in" data-aos-delay="300">
+          <div class="skill-icon"><i class="fab fa-css3-alt"></i></div>
+          <h3 class="skill-title">TailwindCSS</h3>
+          <div class="skill-bar"><div class="skill-level" style="width: 90%"></div></div>
+        </div>
+  
+        <!-- JavaScript -->
+        <div class="skill-card" data-aos="zoom-in" data-aos-delay="400">
+          <div class="skill-icon"><i class="fab fa-js"></i></div>
+          <h3 class="skill-title">JavaScript</h3>
+          <div class="skill-bar"><div class="skill-level" style="width: 70%"></div></div>
+        </div>
+  
+        <!-- Python -->
+        <div class="skill-card" data-aos="zoom-in" data-aos-delay="500">
+          <div class="skill-icon"><i class="fab fa-python"></i></div>
+          <h3 class="skill-title">Python</h3>
+          <div class="skill-bar"><div class="skill-level" style="width: 65%"></div></div>
+        </div>
+  
+        <!-- Django -->
+        <div class="skill-card" data-aos="zoom-in" data-aos-delay="600">
+          <div class="skill-icon"><i class="fab fa-python"></i></div>
+          <h3 class="skill-title">Django</h3>
+          <div class="skill-bar"><div class="skill-level" style="width: 70%"></div></div>
+        </div>
+  
+        <!-- Django REST -->
+        <div class="skill-card" data-aos="zoom-in" data-aos-delay="700">
+          <div class="skill-icon"><i class="fas fa-cogs"></i></div>
+          <h3 class="skill-title">Django REST Framework</h3>
+          <div class="skill-bar"><div class="skill-level" style="width: 55%"></div></div>
+        </div>
+  
+        <!-- WordPress -->
+        <div class="skill-card" data-aos="zoom-in" data-aos-delay="800">
+          <div class="skill-icon"><i class="fab fa-wordpress"></i></div>
+          <h3 class="skill-title">WordPress</h3>
+          <div class="skill-bar"><div class="skill-level" style="width: 30%"></div></div>
+        </div>
+      </div>
+  
+      <!-- Autres compétences -->
+      <div class="mt-20">
+        <h3 class="text-2xl font-bold mb-6 text-center" data-translate="skills.otherTitle">Autres compétences</h3>
+        <div class="flex flex-wrap justify-center gap-4">
+  
+          <!-- Frontend -->
+
+          <span class="badge">Chart.js</span>
+  
+          <!-- Backend / Data -->
+          <span class="badge">SQLite</span>
+          <span class="badge">REST APIs</span>
+  
+          <!-- Tests / outils -->
+          <span class="badge">Playwright</span>
+          <span class="badge">Git</span>
+  
+        </div>
+      </div>
+    </div>
+  </section>
+  
+
+  <!-- Projects Section -->
+  <section id="projects" class="py-24 bg-gray-50 dark:bg-gray-800">
+    <div class="container mx-auto px-6">
+      <h2 class="section-title" data-translate="projects.title">Mes projets</h2>
+      <p class="section-description" data-translate="projects.description">
+        Découvrez une sélection de mes travaux les plus récents
+      </p>
+      
+      <div class="mt-12 grid md:grid-cols-2 lg:grid-cols-3 gap-8" id="projects-container">
+        <!-- Projects will be loaded here from JSON -->
+        <div class="skeleton-card"></div>
+        <div class="skeleton-card"></div>
+        <div class="skeleton-card"></div>
+        <div class="skeleton-card"></div>
+        <div class="skeleton-card"></div>
+        <div class="skeleton-card"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Project Modal -->
+  <div id="project-modal" class="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4 hidden opacity-0 transition-opacity duration-300">
+    <div class="bg-white dark:bg-gray-900 rounded-lg shadow-xl max-w-4xl w-full max-h-[90vh] overflow-y-auto transform transition-transform duration-300 scale-95">
+      <div class="p-6">
+        <div class="flex justify-between items-start mb-4">
+          <h3 id="modal-title" class="text-2xl font-bold"></h3>
+          <button id="close-modal" class="text-gray-500 hover:text-gray-700 dark:hover:text-gray-300 transition-colors">
+            <i class="fas fa-times text-xl"></i>
+          </button>
+        </div>
+        <div id="modal-content" class="space-y-4">
+          <!-- Modal content will be loaded here -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Certifications Section -->
+  <section id="certifications" class="py-24 bg-gray-50 dark:bg-gray-800">
+    <div class="container mx-auto px-6">
+      <h2 class="section-title" data-translate="certifications.title">Certifications</h2>
+      <p class="section-description" data-translate="certifications.description">
+        Mes accréditations et formations professionnelles
+      </p>
+      
+      <div class="mt-12 grid md:grid-cols-2 lg:grid-cols-3 gap-8" id="certifications-container">
+        <!-- Certifications will be loaded here from JSON -->
+        <div class="skeleton-card"></div>
+        <div class="skeleton-card"></div>
+        <div class="skeleton-card"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Current Goals Section -->
+  <section id="goals" class="py-24">
+    <div class="container mx-auto px-6">
+      <h2 class="section-title" data-translate="goals.title">Objectifs actuels</h2>
+      <p class="section-description" data-translate="goals.description">
+        Ce sur quoi je travaille actuellement
+      </p>
+
+      <div class="mt-12">
+        <div class="relative">
+          <div class="absolute left-0 inset-y-0 w-1 bg-blue-200 dark:bg-blue-900 rounded-full"></div>
+
+          <!-- Goal 1 : Scraping Python -->
+          <div class="timeline-item" data-aos="fade-up">
+            <h3 class="text-xl font-bold" data-translate="goals.goal1.title">Maîtriser le scraping avec Python</h3>
+            <p class="text-gray-600 dark:text-gray-400 mb-4" data-translate="goals.goal1.description">
+              Utiliser des bibliothèques comme BeautifulSoup et Selenium pour extraire efficacement des données web de manière automatisée.
+            </p>
+            <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-4">
+              <div class="bg-blue-600 dark:bg-blue-500 h-4 rounded-full" style="width: 60%"></div>
+            </div>
+            <span class="text-sm text-blue-600 dark:text-blue-400 font-medium">60%</span>
+          </div>
+
+          <!-- Goal 2 : Flutter mobile -->
+          <div class="timeline-item" data-aos="fade-up" data-aos-delay="100">
+            <h3 class="text-xl font-bold" data-translate="goals.goal2.title">Développer des apps mobiles avec Flutter</h3>
+            <p class="text-gray-600 dark:text-gray-400 mb-4" data-translate="goals.goal2.description">
+              Apprendre à créer des applications performantes et multiplateformes avec Dart et Flutter, pour Android et iOS.
+            </p>
+            <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-4">
+              <div class="bg-blue-600 dark:bg-blue-500 h-4 rounded-full" style="width: 5%"></div>
+            </div>
+            <span class="text-sm text-blue-600 dark:text-blue-400 font-medium">5%</span>
+          </div>
+
+          <!-- Goal 3 : Approfondir React -->
+          <div class="timeline-item" data-aos="fade-up" data-aos-delay="200">
+            <h3 class="text-xl font-bold" data-translate="goals.goal3.title">Renforcer mes compétences en React</h3>
+            <p class="text-gray-600 dark:text-gray-400 mb-4" data-translate="goals.goal3.description">
+              Mieux comprendre les hooks, le state management et l’écosystème React pour développer des interfaces modernes et dynamiques.
+            </p>
+            <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-4">
+              <div class="bg-blue-600 dark:bg-blue-500 h-4 rounded-full" style="width: 2%"></div>
+            </div>
+            <span class="text-sm text-blue-600 dark:text-blue-400 font-medium">2%</span>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-24">
+    <div class="container mx-auto px-6">
+      <h2 class="section-title" data-translate="contact.title">Me contacter</h2>
+      <p class="section-description" data-translate="contact.description">
+        Discutons de votre projet et voyons comment je peux vous aider
+      </p>
+      
+      <div class="grid md:grid-cols-2 gap-12 mt-12">
+        <div data-aos="fade-right">
+          <div class="bg-white dark:bg-gray-900 rounded-lg shadow-lg p-8">
+            <form action="https://formsubmit.co/weleasher@gmail.com" method="POST" id="contact-form" class="space-y-6">
+              <div>
+                <label for="name" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1" data-translate="contact.form.name">Nom</label>
+                <input 
+                  type="text" 
+                  id="name" 
+                  name="name" 
+                  class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-800 dark:text-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  required
+                />
+              </div>
+              
+              <div>
+                <label for="email" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1" data-translate="contact.form.email">Email</label>
+                <input 
+                  type="email" 
+                  id="email" 
+                  name="email" 
+                  class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-800 dark:text-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  required
+                />
+              </div>
+              
+              <div>
+                <label for="subject" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1" data-translate="contact.form.subject">Sujet</label>
+                <input 
+                  type="text" 
+                  id="subject" 
+                  name="subject" 
+                  class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-800 dark:text-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  required
+                />
+              </div>
+              
+              <div>
+                <label for="message" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1" data-translate="contact.form.message">Message</label>
+                <textarea 
+                  id="message" 
+                  name="message" 
+                  rows="5" 
+                  class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-800 dark:text-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  required
+                ></textarea>
+              </div>
+              
+              <button 
+                type="submit" 
+                class="w-full px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                data-translate="contact.form.submit"
+              >
+                Envoyer le message
+              </button>
+            </form>
+          </div>
+        </div>
+        
+        <div data-aos="fade-left">
+          <div class="bg-white dark:bg-gray-900 rounded-lg shadow-lg p-8 h-full">
+            <h3 class="text-2xl font-bold mb-6" data-translate="contact.info.title">Informations de contact</h3>
+            
+            <div class="space-y-6">
+              <div class="flex items-start">
+                <div class="flex-shrink-0 h-10 w-10 rounded-full bg-blue-100 dark:bg-blue-900 flex items-center justify-center text-blue-600 dark:text-blue-400">
+                  <i class="fas fa-envelope"></i>
+                </div>
+                <div class="ml-4">
+                  <h4 class="text-lg font-medium" data-translate="contact.info.email">Email</h4>
+                  <a href="mailto:contact@johndoe.com" class="text-blue-600 dark:text-blue-400 hover:underline">weleasher@gmail.com</a>
+                </div>
+              </div>
+              
+              <div class="flex items-start">
+                <div class="flex-shrink-0 h-10 w-10 rounded-full bg-blue-100 dark:bg-blue-900 flex items-center justify-center text-blue-600 dark:text-blue-400">
+                  <i class="fas fa-phone-alt"></i>
+                </div>
+                <div class="ml-4">
+                  <h4 class="text-lg font-medium" data-translate="contact.info.phone">Téléphone</h4>
+                  <a href="tel:+33612345678" class="text-blue-600 dark:text-blue-400 hover:underline">+229 01 54 14 21 01</a>
+                </div>
+              </div>
+              
+              <div class="flex items-start">
+                <div class="flex-shrink-0 h-10 w-10 rounded-full bg-blue-100 dark:bg-blue-900 flex items-center justify-center text-blue-600 dark:text-blue-400">
+                  <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <div class="ml-4">
+                  <h4 class="text-lg font-medium" data-translate="contact.info.location">Localisation</h4>
+                  <p>Abomey-Calavi, Bénin</p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="mt-12">
+              <h4 class="text-lg font-medium mb-4" data-translate="contact.info.social">Réseaux sociaux</h4>
+              <div class="flex space-x-4">
+                <a href="https://github.com/AsherwL" class="social-icon">
+                  <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/asher-wele-9bb728271/" class="social-icon">
+                  <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://x.com/asher_wele" class="social-icon">
+                  <i class="fab fa-twitter"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-12 bg-gray-900 text-white">
+    <div class="container mx-auto px-6">
+      <div class="grid md:grid-cols-3 gap-12">
+        <div>
+          <h3 class="text-2xl font-bold mb-4" data-translate="name">John Doe</h3>
+          <p class="mb-4 text-gray-400" data-translate="footer.description">
+            Créateur d'expériences web modernes et esthétiques, axées sur l'utilisateur.
+          </p>
+          <div class="flex space-x-4">
+            <a href="#" class="text-gray-400 hover:text-white transition-colors">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="#" class="text-gray-400 hover:text-white transition-colors">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="#" class="text-gray-400 hover:text-white transition-colors">
+              <i class="fab fa-twitter"></i>
+            </a>
+          </div>
+        </div>
+        
+        <div>
+          <h3 class="text-xl font-bold mb-4" data-translate="footer.quickLinks">Liens rapides</h3>
+          <ul class="space-y-2">
+            <li><a href="#about" class="text-gray-400 hover:text-white transition-colors" data-translate="nav.about">À propos</a></li>
+            <li><a href="#skills" class="text-gray-400 hover:text-white transition-colors" data-translate="nav.skills">Compétences</a></li>
+            <li><a href="#projects" class="text-gray-400 hover:text-white transition-colors" data-translate="nav.projects">Projets</a></li>
+            <li><a href="#contact" class="text-gray-400 hover:text-white transition-colors" data-translate="nav.contact">Contact</a></li>
+          </ul>
+        </div>
+      
+      <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+        <p class="text-gray-400 text-sm">
+          &copy; 2025 <span data-translate="name">Asher WELE</span>. <span data-translate="footer.rights">Tous droits réservés</span>.
+        </p>
+        <div class="mt-4 md:mt-0">
+          <button id="footer-lang-switch" class="text-gray-400 hover:text-white transition-colors px-3 py-1">
+            <i class="fas fa-globe mr-2"></i>
+            <span class="lang-text" data-translate="language">FR</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to top button -->
+  <button id="back-to-top" class="fixed bottom-6 right-6 p-3 rounded-full bg-blue-600 text-white shadow-lg hidden z-50 hover:bg-blue-700 transition-colors">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+
+  <!-- Scripts -->
+  <script type="module" src="/src/js/main.js"></script>
+</body>
+</html>

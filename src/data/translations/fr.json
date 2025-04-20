@@ -1,0 +1,84 @@
+{
+  "name": "Asher WELE",
+  "language": "FR",
+  "nav": {
+    "about": "À propos",
+    "skills": "Compétences",
+    "projects": "Projets",
+    "contact": "Contact"
+  },
+  "hero": {
+    "greeting": "Bonjour, je suis",
+    "description": "Créatif, passionné et déterminé à créer des expériences web exceptionnelles.",
+    "hire": "Me confier un projet",
+    "projects": "Voir mes projets"
+  },
+  "about": {
+  "title": "À propos de moi",
+  "paragraph1": "Je suis un développeur web junior passionné par le back-end, curieux et toujours prêt à apprendre. J’ai déjà réalisé plusieurs projets concrets avec Django, TailwindCSS et SQLite, et je continue à monter en compétences chaque semaine.",
+  "paragraph2": "Même si je débute dans le métier, je suis quelqu’un de fiable, organisé et investi. Chaque ligne de code est pour moi une occasion d’évoluer et de créer des outils utiles, efficaces et pensés pour l’utilisateur.",
+  "paragraph3": "Je suis à l’aise en autonomie comme en équipe, et je mets un point d'honneur à livrer un travail propre, documenté et évolutif. Vous avez un projet ? Je suis prêt à le concrétiser à vos côtés.",
+  "downloadCV": "Télécharger CV",
+  "contact": "Me contacter",
+  "stats": {
+    "projects": "Projets réalisés",
+    "coffee": "Tasses de café 😄",
+    "hours": "Heures de code",
+    "clients": "Clients satisfaits"
+    }
+  },
+  "skills": {
+    "title": "Mes compétences",
+    "description": "Voici les technologies et outils avec lesquels j'ai l'habitude de travailler",
+    "otherTitle": "Autres compétences"
+  },
+  "projects": {
+    "title": "Mes projets",
+    "description": "Découvrez une sélection de mes travaux les plus récents"
+  },
+  "certifications": {
+    "title": "Certifications",
+    "description": "Mes accréditations et formations professionnelles"
+  },
+  "goals": {
+    "title": "Objectifs actuels",
+    "description": "Ce sur quoi je travaille actuellement",
+    "goal1": {
+      "title": "Maîtriser le scraping avec Python",
+      "description": "Utiliser des bibliothèques comme BeautifulSoup et Selenium pour extraire efficacement des données web de manière automatisée."
+    },
+    "goal2": {
+      "title": "Développer des apps mobiles avec Flutter",
+      "description": "Apprendre à créer des applications performantes et multiplateformes avec Dart et Flutter, pour Android et iOS."
+    },
+    "goal3": {
+      "title": "Renforcer mes compétences en React",
+      "description": "Mieux comprendre les hooks, le state management et l’écosystème React pour développer des interfaces modernes et dynamiques."
+    }
+  },
+
+  "contact": {
+    "title": "Me contacter",
+    "description": "Discutons de votre projet et voyons comment je peux vous aider",
+    "form": {
+      "name": "Nom",
+      "email": "Email",
+      "subject": "Sujet",
+      "message": "Message",
+      "submit": "Envoyer le message"
+    },
+    "info": {
+      "title": "Informations de contact",
+      "email": "Email",
+      "phone": "Téléphone",
+      "location": "Localisation",
+      "social": "Réseaux sociaux"
+    }
+  },
+  "footer": {
+    "description": "Créateur d'expériences web modernes et esthétiques, axées sur l'utilisateur.",
+    "quickLinks": "Liens rapides",
+    "emailPlaceholder": "Votre email",
+    "rights": "Tous droits réservés"
+  }
+}

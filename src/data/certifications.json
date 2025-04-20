@@ -1,0 +1,82 @@
+[
+  {
+    "id": "cert_django",
+    "logo": "https://cdn.worldvectorlogo.com/logos/django.svg",
+    "date": "2024",
+    "link": "",
+    "fr": {
+      "title": "Django REST Framework",
+      "issuer": "Udemy (formation suivie)",
+      "description": "Apprentissage approfondi de Django REST Framework pour créer des APIs sécurisées et performantes en Python."
+    },
+    "en": {
+      "title": "Django REST Framework",
+      "issuer": "Udemy (course completed)",
+      "description": "In-depth learning of Django REST Framework to build secure and performant APIs in Python."
+    }
+  },
+  {
+    "id": "cert_wordpress",
+    "logo": "https://cdn-icons-png.flaticon.com/512/174/174881.png",
+    "date": "2024",
+    "link": "",
+    "fr": {
+      "title": "Création de sites avec WordPress",
+      "issuer": "OpenClassrooms",
+      "description": "Formation sur la création et la gestion de sites dynamiques avec WordPress."
+    },
+    "en": {
+      "title": "Building websites with WordPress",
+      "issuer": "OpenClassrooms",
+      "description": "Course on creating and managing dynamic websites with WordPress."
+    }
+  },
+  {
+    "id": "cert_htmlcss",
+    "logo": "https://cdn-icons-png.flaticon.com/512/919/919827.png",
+    "date": "2023",
+    "link": "",
+    "fr": {
+      "title": "HTML & CSS Fondamentaux",
+      "issuer": "OpenClassrooms",
+      "description": "Bases solides du développement web avec HTML5 et CSS3."
+    },
+    "en": {
+      "title": "HTML & CSS Fundamentals",
+      "issuer": "OpenClassrooms",
+      "description": "Solid foundations in web development with HTML5 and CSS3."
+    }
+  },
+  {
+    "id": "cert_js",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png",
+    "date": "2024",
+    "link": "",
+    "fr": {
+      "title": "JavaScript Essentiel",
+      "issuer": "OpenClassrooms",
+      "description": "Manipulation du DOM, événements, fonctions, et logique JS pour projets web interactifs."
+    },
+    "en": {
+      "title": "Essential JavaScript",
+      "issuer": "OpenClassrooms",
+      "description": "DOM manipulation, events, functions and JS logic for interactive web projects."
+    }
+  },
+  {
+    "id": "cert_python",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg",
+    "date": "2022",
+    "link": "",
+    "fr": {
+      "title": "Python pour les débutants",
+      "issuer": "Udemy",
+      "description": "Introduction aux bases de Python, structures de contrôle, fonctions et manipulation de données."
+    },
+    "en": {
+      "title": "Python for Beginners",
+      "issuer": "Udemy",
+      "description": "Intro to Python basics, control flow, functions and data handling."
+    }
+  }
+]

@@ -1,0 +1,41 @@
+[
+  {
+    "id": "project_solar",
+    "image": "/src/images/Projet_panneau_solaire.png",
+    "client": "Projet local",
+    "date": "2024",
+    "technologies": ["Django", "TailwindCSS", "SQLite"],
+    "link": "",  
+    "fr": {
+      "title": "Système de suivi pour installations solaires",
+      "shortDescription": "Application locale de monitoring",
+      "description": "Développement d’un outil local pour surveiller les performances de systèmes photovoltaïques. Interface Django avec affichage des données, journal des événements et gestion des utilisateurs. Design responsive avec TailwindCSS."
+    },
+    "en": {
+      "title": "Solar Installation Monitoring System",
+      "shortDescription": "Local monitoring dashboard",
+      "description": "Developed a local tool to monitor solar panel performance. Django-based UI with data display, event logging, and user management. Responsive design built with TailwindCSS."
+    },
+    "tags": ["Monitoring", "Backend", "Energy"]
+  },
+  
+  {
+    "id": "project_blog",
+    "image": "/src/images/Projet_blog_personnel.png",
+    "client": "Projet personnel",
+    "date": "2025",
+    "technologies": ["Django", "TailwindCSS", "SQLite"],
+    "link": "https://hrsphere.up.railway.app",  
+    "fr": {
+      "title": "Blog personnel avec Django",
+      "shortDescription": "Plateforme de blog dynamique et minimaliste",
+      "description": "Création d'une plateforme de blog avec Django, incluant gestion des articles, back-office sécurisé, catégorisation et responsive design avec Tailwind. Utilisation de SQLite pour la base de données."
+    },
+    "en": {
+      "title": "Personal Blog with Django",
+      "shortDescription": "Minimalist and dynamic blogging platform",
+      "description": "Built a blogging platform using Django with article management, secure admin, categorization, and a responsive UI via TailwindCSS. Data stored in SQLite."
+    },
+    "tags": ["Blog", "Backend", "Full Stack"]
+  }
+]
